@@ -6,11 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cricket</title>
+    <style>
+        .field {
+            outline: 1px solid red;
+        }
+
+        .bat {
+            transition: transform 0.25s ease-in;
+        }
+
+        .field:hover .bat {
+            transform: rotate(-40deg);
+            transform-origin: top right;
+        }
+
+        .field:hover .ball {
+            transform: translate(1000px, -200px);
+        }
+
+        .ball {
+            background-image: linear-gradient(45deg, red, brown);
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            position: relative;
+            left: 608px;
+            bottom: 100px;
+            transition: transform 0.4s ease-out 0.3s;
+
+        }
+    </style>
 </head>
 
 <body>
     <div class="field">
-        <img src="images/bat.png" alt="a-cricket-bat">
+        <img class="bat" src="images/bat.png" alt="a-cricket-bat">
+        <div class="ball"></div>
     </div>
 </body>
 
